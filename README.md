@@ -35,5 +35,10 @@ After confirmation, the UI intelligently disables inputs to prevent accidental c
 
 Note: Clicking the Reset Button will restore the form to its initial state, re-enabling all controls for a new order.
 
-
+## 🛠️ How to Run
+To run this project locally, follow these steps:
+1. **Clone the repository:** `git clone https://github.com/boumakelnadir/PizzaProject-OOP.git`
+2. **Open the Solution:** Locate the `PizzaProject.sln` file and open it using **Visual Studio 2022** (or newer).
+3. **Restore Packages:** Visual Studio will automatically restore any dependencies.
+4. **Build & Run:** Press `F5` or click the **Start** button to launch the application.
 
