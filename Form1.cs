@@ -10,6 +10,16 @@ namespace PizzaProject
             InitializeComponent();
         }
 
+        int GetCalcOrderPizza()
+        {
+            return ((int)numericUpDown_pizza.Value);
+        }
+
+        void GetSelectOrderPizza()
+        {
+            numericUpDown_pizza.Value = 1;
+        }
+
         float GetCalcSizePrice()
         {
             if (rb_small.Checked)
@@ -84,7 +94,8 @@ namespace PizzaProject
 
         float CalcTotalPrice()
         {
-            return GetCalcSizePrice() + GetCalcCrustTypePrice() + GetCalcToppingsPrice() + GetCalcWhereToEatPrice();
+            return (GetCalcSizePrice() + GetCalcCrustTypePrice() + GetCalcToppingsPrice()
+                + GetCalcWhereToEatPrice()) * GetCalcOrderPizza();
         }
 
         void UpdateTotalPrice()
@@ -195,6 +206,7 @@ namespace PizzaProject
             GetSelectCrustType();
             GetSelectToppings();
             GetSelectWhereToEat();
+            GetSelectOrderPizza();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -284,7 +296,7 @@ namespace PizzaProject
                 gb_where_to_eat.Enabled = false;
                 btn_order_pizza.Enabled = false;
                 btn_reset_form.Enabled = true;
-
+                numericUpDown_pizza.Enabled = false;
             }
             else
 
@@ -321,6 +333,16 @@ namespace PizzaProject
 
             //Reset Order Button
             btn_order_pizza.Enabled = true;
+
+            //numeric control
+            numericUpDown_pizza.Enabled = true;
+            numericUpDown_pizza.Value = 1;
+        }
+
+
+        private void numericUpDown_pizza_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateTotalPrice();
         }
     }
 }

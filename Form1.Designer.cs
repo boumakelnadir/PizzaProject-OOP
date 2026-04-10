@@ -60,11 +60,14 @@
             this.lb_order_summary_size_fixed = new System.Windows.Forms.Label();
             this.lb_oreder_summary_toppings_fixed = new System.Windows.Forms.Label();
             this.lb_order_summary_size = new System.Windows.Forms.Label();
+            this.numericUpDown_pizza = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.gb_size.SuspendLayout();
             this.gb_cust_type.SuspendLayout();
             this.gb_toppings.SuspendLayout();
             this.gb_where_to_eat.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_pizza)).BeginInit();
             this.SuspendLayout();
             // 
             // TitleLabel
@@ -439,11 +442,32 @@
             this.lb_order_summary_size.TabIndex = 0;
             this.lb_order_summary_size.Text = " Small";
             // 
+            // numericUpDown_pizza
+            // 
+            this.numericUpDown_pizza.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown_pizza.Location = new System.Drawing.Point(968, 505);
+            this.numericUpDown_pizza.Name = "numericUpDown_pizza";
+            this.numericUpDown_pizza.Size = new System.Drawing.Size(120, 40);
+            this.numericUpDown_pizza.TabIndex = 8;
+            this.numericUpDown_pizza.ValueChanged += new System.EventHandler(this.numericUpDown_pizza_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(801, 510);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 29);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Order Pizza :";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 583);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.numericUpDown_pizza);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btn_reset_form);
             this.Controls.Add(this.btn_order_pizza);
@@ -465,6 +489,7 @@
             this.gb_where_to_eat.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_pizza)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,6 +529,8 @@
         private System.Windows.Forms.Label lb_total_price;
         private System.Windows.Forms.Label lb_total_price_fixed;
         private System.Windows.Forms.Label lb_order_summary_toppings;
+        private System.Windows.Forms.NumericUpDown numericUpDown_pizza;
+        private System.Windows.Forms.Label label1;
     }
 }
 
